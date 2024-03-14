@@ -1,0 +1,99 @@
+<html>
+<head>
+    <title>Mua Vé Xem Phim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 500px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input, select {
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mua Vé Xem Phim</h1>
+        <form action="process.php" method="POST">
+            <!-- Form fields go here -->
+            <label for="date">Ngày Chiếu:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Giờ Chiếu:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="quantity">Số Lượng Vé:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="ticket-type">Loại Vé:</label>
+            <select id="ticket-type" name="ticket-type" required>
+                <option value="adult">Người Lớn</option>
+                <option value="child">Trẻ Em</option>
+                <option value="student">Học Sinh/Sinh Viên</option>
+            </select>
+
+            <label for="payment-method">Phương Thức Thanh Toán:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Thẻ Tín Dụng</option>
+                <option value="bank-transfer">Chuyển Khoản Ngân Hàng</option>
+                <option value="cash">Tiền Mặt</option>
+            </select>
+            <button type="button" onclick="showSuccessMessage()">Mua Vé</button>
+        </form>
+    </div>
+
+    <script>
+        function showSuccessMessage() {
+            var confirmation = confirm("Mua vé thành công! Nhấn OK để quay lại Trang Chủ.");
+            if (confirmation) {
+                window.location.href = "Home2.html";
+            }
+        }
+    </script>
+</body>
+</html>

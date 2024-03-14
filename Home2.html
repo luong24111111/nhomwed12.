@@ -1,0 +1,163 @@
+<html>
+<head>
+    <title>MUA VÉ</title>
+    <style>
+        nav ul li {
+            display: inline;
+            padding: 10px 10px 6px 10px;
+            color: rgb(44, 89, 144);
+            transition: font-size 0.3s, color 0.3s;
+            font-size: 16px;
+        }
+        
+        nav ul li:hover {
+            color: brown;
+            font-size: 18px;
+        }
+        
+        nav ul li a {
+            color: rgb(59, 15, 104);
+            text-decoration: none;
+        }
+        
+        nav ul li a:hover {
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+            border-bottom-color: brown;
+        }
+        
+        img {
+            width: 280px;
+        }
+        
+        ul.products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0;
+            list-style: none;
+        }
+        
+        li.product {
+            flex-basis: 30%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        a.ve {
+            text-decoration: none;
+            border-color: rgb(109, 109, 139);
+            border-style: solid;
+            border-radius: 20px;
+            background-color: white;
+            color: rgb(69, 15, 120);
+            padding: 8px 15px;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        
+        a.ve:hover {
+            background-color: rgb(237, 44, 30);
+            color: white;
+        }
+        .modal-content form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center; color: rgb(243, 19, 19)">MUA VÉ XEM PHIM</h1>
+        <nav style="text-align: center;">
+            <ul>
+                <li><a href="#">LỊCH CHIẾU THEO RẠP</a></li>
+                <li><a href="#">PHIM</a></li>
+                <li><a href="#">RẠP</a></li>
+                <li><a href="#">GIÁ VÉ</a></li>
+                <li><a href="#">TIN MỚI VÀ ƯU ĐÃI</a></li>
+                <li><a href="#">NHƯỢNG QUYỀN</a></li>
+                <li><a href="#">THÀNH VIÊN</a></li>
+            </ul>
+        </nav>
+        <br>
+        <h3 style="text-align: center;">PHIM ĐANG HOT</h3><br>
+        <ul class="products">
+            <li class="product"><a href="https://www.betacinemas.vn/chi-tiet-phim.htm?gf=e907f532-3ad6-493a-8c19-2ce7d0846542">
+                <img id="anh1" src="https://files.betacorp.vn/files/media%2fimages%2f2024%2f02%2f27%2f400x633%2D115125%2D270224%2D44.jpg">
+                <h3 style="text-align: center;">Bà thím báo thù</h3></a>
+                <h4>Thể loại: Hành động, Hài hước<br>
+                    Thời lượng: 111 phút<br>
+                    Giá vé: 99,000 VNĐ
+                </h4>
+                <div style="text-align: center;">
+                    <a href="MuaVe.html" class="ve" onclick="openModal()">MUA VÉ</a>
+                    <a href="https://betacinemas.vn/chi-tiet-phim.htm?gf=e907f532-3ad6-493a-8c19-2ce7d0846542" class="ve" onclick="openModal()">XEM THÔNG TIN</a>
+                </div>
+            </li>
+            <li class="product"><a href="https://www.betacinemas.vn/chi-tiet-phim.htm?gf=ed4589bf-dc6d-4d57-89cb-b7ce187fa152">
+                <img id="anh2" src="https://files.betacorp.vn/files/media%2fimages%2f2024%2f02%2f22%2fdao%2Dpho%2Dpiano%2D143054%2D220224%2D21.png">
+                <h3 style="text-align: center;">Đào, phở và piano</h3></a>
+                <h4>Thể loại: Lịch sử, Tình cảm<br>
+                    Thời lượng: 100 phút<br>
+                    Giá vé: 99,000 VNĐ
+                </h4>
+                <div style="text-align: center;">
+                    <a href="MuaVe.html" class="ve" onclick="openModal()">MUA VÉ</a>
+                    <a href="https://vi.wikipedia.org/wiki/%C4%90%C3%A0o,_ph%E1%BB%9F_v%C3%A0_piano" class="ve" onclick="openModal()">XEM THÔNG TIN</a>
+                </div>
+            </li>
+            <li class="product"><a href="https://www.betacinemas.vn/chi-tiet-phim.htm?gf=930ef7aa-4750-470d-affa-c90d58397e36">
+                <img id="anh3" src="https://files.betacorp.vn/files/media%2fimages%2f2024%2f01%2f29%2fmaiiii%2D135926%2D290124%2D71.jpg">
+                <h3 style="text-align: center;">Mai</h3></a>
+                <h4>Thể loại: Tâm lý, Tình cảm<br>
+                    Thời lượng: 131 phút<br>
+                    Giá vé: 99,000 VNĐ
+                </h4>
+                <div style="text-align: center;">
+                    <a href="MuaVe.html" class="ve" onclick="openModal()">MUA VÉ</a>
+                    <a href="https://vi.wikipedia.org/wiki/Mai_(phim)" class="ve" onclick="openModal()">XEM THÔNG TIN</a>
+                </div>
+            </li>
+            <li class="product"><a href="https://www.betacinemas.vn/chi-tiet-phim.htm?gf=2bbf5152-a6d8-44f9-8c1e-c7d7e70baf04">
+                <img id="anh4" src="https://files.betacorp.vn/files/media%2fimages%2f2024%2f01%2f29%2fdieu%2Dnhi%2D141116%2D290124%2D81.jpg">
+                <h3 style="text-align: center;">Gặp lại chị bầu</h3></a>
+                <h4>Thể loại: Tình cảm, Hài hước<br>
+                    Thời lượng:114 phút<br>
+                    Giá vé: 99,000 VNĐ
+                </h4>
+                <div style="text-align: center;">
+                    <a href="MuaVe.html" class="ve" onclick="openModal()">MUA VÉ</a>
+                    <a href="https://vi.wikipedia.org/wiki/G%E1%BA%B7p_l%E1%BA%A1i_ch%E1%BB%8B_b%E1%BA%A7u" class="ve" onclick="openModal()">XEM THÔNG TIN</a>
+                </div>
+            </li>
+            <li class="product"><a href="https://www.betacinemas.vn/chi-tiet-phim.htm?gf=ea446c4f-ba19-473e-adc9-4c982863d77a">
+                <img id="anh5" src="https://files.betacorp.vn/files/media%2fimages%2f2024%2f01%2f03%2fnight%2Dswim%2D164739%2D030124%2D11.jpg">
+                <h3 style="text-align: center;">Bơi đêm</h3></a>
+                <h4>Thể loại: Kinh dị, Hồi hộp<br>
+                    Thời lượng: 99 phút<br>
+                    Giá vé: 99,000 VNĐ
+                </h4>
+                <div style="text-align: center;">
+                    <a href="MuaVe.html" class="ve" onclick="openModal()">MUA VÉ</a>
+                    <a href="https://vi.wikipedia.org/wiki/G%E1%BA%B7p_l%E1%BA%A1i_ch%E1%BB%8B_b%E1%BA%A7u" class="ve" onclick="openModal()">XEM THÔNG TIN</a>
+                </div>
+            </li>
+            <li class="product"><a href="https://www.betacinemas.vn/chi-tiet-phim.htm?gf=8defa270-e57b-4d88-a662-b62b74fd3c25">
+                <img id="anh6" src="https://files.betacorp.vn/files/media%2fimages%2f2024%2f02%2f02%2fle%2Dtru%2Dta%2D145634%2D020224%2D68.jpg">
+                <h3 style="text-align: center;">Lễ trừ tà</h3></a> 
+                <h4>Thể loại: Kinh dị<br>
+                    Thời lượng: 84 phút<br>
+                    Giá vé: 99,000 VNĐ
+                </h4>
+                <div style="text-align: center;">
+                    <a href="MuaVe.html" class="ve" onclick="openModal()">MUA VÉ</a>
+                    <a href="https://rapchieuphim.com/phim/le-tru-ta" class="ve" onclick="openModal()">XEM THÔNG TIN</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>Đăng nhập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 12px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Đăng nhập</h2>
+        <form id="login_form">
+            <label for="login_username">Tên người dùng hoặc Email:</label>
+            <input type="text" id="login_username" name="login_username" required>
+            <label for="login_password">Mật khẩu:</label>
+            <input type="password" id="login_password" name="login_password" required>
+            <button type="submit">Đăng nhập</button>
+        </form>
+        <div class="form-footer">
+            <p>Bạn chưa có tài khoản? <a href="DangKiTaiKhoan.html">Đăng ký ngay</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login_form").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            window.location.href = "Home2.html"; 
+        });
+    </script>
+</body>
+</html>
